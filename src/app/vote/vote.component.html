@@ -1,0 +1,128 @@
+<app-secondnav2></app-secondnav2>
+
+<section class="bread-crumb visible-md visible-lg visible-sm">
+  <div class="container-fluid text-center1">
+    <div class="row">
+
+      <ul>
+        <li class="">
+          Charts >> <span class="" data-toggle="collapse" data-target="#discover">All What is Charts <i class="fa fa-question-circle" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          Best Male vocalist
+        </li>
+
+      </ul>
+
+
+      <div class="collapse" id="discover">
+        <div class="discover-text text-center">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              ReverbNation Discover centers on the idea that the love of an artist doesn’t begin and end with their music.
+              We’re not just sharing our favorite songs and leaving the rest to you — we’re giving you the stories and people behind those songs.
+              And with more than 4 million global artists on ReverbNation, our Curation Team of industry tastemakers is on the hunt to uncover as many
+              of those moments, movements, and music as we can
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bread-crumb visible-xs">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-9 text-center"><h3>Discover</h3></div>
+      <div class="col-md-33">
+        <a class="text-center" data-toggle="collapse"  href="#discover-mobile" aria-expanded="false" aria-controls="discover-mobile"><h3>What is Discover <i class="fa fa-question-circle" aria-hidden="true"></i></h3></a>
+      </div>
+
+      <div class="collapse" id="discover-mobile">
+        <div class="discover-text text-center">
+          <div class="row2">
+            <div class="col-md-6 col-md-offset-3">
+              ReverbNation Discover centers on the idea that the love of an artist doesn’t begin and end with their music.
+              We’re not just sharing our favorite songs and leaving the rest to you — we’re giving you the stories and people behind those songs.
+              And with more than 4 million global artists on ReverbNation, our Curation Team of industry tastemakers is on the hunt to uncover as many
+              of those moments, movements, and music as we can
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- body Area -->
+<div class="section ">
+  <div class="container-fluid">
+    <div class="row row-sm">
+      <div class="col-md-2 cat-holderd">
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Categories</div>
+          <div class="panel-body">
+            <p>...</p>
+          </div>
+
+          <!-- List group -->
+          <ul class="list-group">
+            <app-category-menu></app-category-menu>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="col-md-10">
+        <section class="col-sm-12 no-padder bg">
+          <div class="panel panel-default">
+            <div class="panel-heading">All</div>
+            <div class="panel-body">Her are a list of all categories</div>
+          </div>
+          <section class="vbox">
+            <section class="scrollable hover">
+              <ul class="list-group list-group-lg no-bg auto m-b-none m-t-n-xxs">
+
+
+
+                <router-outlet></router-outlet>
+
+
+
+
+                </ul>
+
+            </section>
+          </section>
+        </section>
+
+      </div>
+
+      <nav aria-label="Page navigation">
+        <ul class="pagination">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+  </div>
+</div>
+

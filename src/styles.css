@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+.active {
+    border-bottom: 3px solid red;
+}
+
+.active-on {
+    background-color: #FF7860!important;
+    color: white;
+}
+
+.active-on a {
+    color: white;
+}
+
+.pagination {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

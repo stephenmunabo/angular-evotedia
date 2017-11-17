@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afritainers</title>
+  <base href="/">
+  <link href="assets/css/afritainicons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="assets/dist/app.bundle.css">
+
+  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+
+
+</head>
+<body id="main">
+<!-- Navigation -->
+
+
+
+
+<app-root></app-root>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>
+
+  jQuery('#mogo-slider').carousel({
+    interval: 5000
+  })
+
+
+
+  // Cache selectors outside callback for performance.
+
+  /*
+   var $window = $(window),
+   $stickyEl = $('.sticky'),
+   elTop = $stickyEl.offset().top;
+
+   $window.scroll(function() {
+   $stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
+   });
+
+   */
+
+
+
+
+
+
+
+
+
+
+  var btnRadius = $('.cd-modal-bg').width()/2,
+          left = $('.cd-modal-bg').offset().left + btnRadius,
+          top = $('.cd-modal-bg').offset().top + btnRadius - $(window).scrollTop(),
+          scale = scaleValue(top, left, btnRadius, $(window).height(), $(window).width());
+
+  function scaleValue( topValue, leftValue, radiusValue, windowW, windowH) {
+    var maxDistHor = ( leftValue > windowW/2) ? leftValue : (windowW - leftValue),
+            maxDistVert = ( topValue > windowH/2) ? topValue : (windowH - topValue);
+    return Math.ceil(Math.sqrt( Math.pow(maxDistHor, 2) + Math.pow(maxDistVert, 2) )/radiusValue);
+  }
+
+
+
+
+
+  $("#container").stalactite({
+    duration: 350,                        // Duration of animation.
+    easing: 'swing',                      // Easing method.
+    cssPrefix: '.stalactite',             // The css naming convention.
+    cssPrep: true,                        // Should stalactite structurally modify css of children?
+    fluid: true,                          // Should stalactite recalculate on window resize?
+    loader: '<img />',                    // The contents of the loader. Defaults to a dataURL animated gif.
+    styles: {} ,                           // A style object to place on the child elements
+    complete: function(v) { return v; }  // Callback function
+  });
+
+
+
+
+
+  //fixed nav bar
+  var mn = jQuery(".nav-2");
+
+  jQuery(window).scroll(function () {
+    if( jQuery(this).scrollTop() > 106 ) {
+      mn.addClass(".sticky");
+    } else {
+      mn.removeClass(".sticky");
+    }
+  });
+  //@ sourceURL=pen.js
+
+</script>
+
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
+</script>
+<script src="assets/dist/app.js"></script>
+</body>
+
+
+</html>

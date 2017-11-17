@@ -1,0 +1,95 @@
+
+
+<div class="row">
+  <app-spinner *ngIf="showSpinner"></app-spinner>
+  <div *ngFor="let item of collection | paginate: { itemsPerPage: 12, currentPage: p }" class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+    <div class="item">
+      <div class="pos-rlt">
+        <div class="bottom"> <span class="badge bg-info m-l-sm m-b-sm">03:20</span> </div>
+        <div class="item-overlay opacity r r-2x bg-black">
+          <div class="text-info padder m-t-sm text-sm">
+            <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+            <i class="fa fa-star-o text-muted"></i>
+          </div> <div class="center text-center m-t-n">
+          <a data-fancybox href="https://www.youtube.com/watch?v={{item.videoYoutubeId}}&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0"><i class="afi afi-play"></i></a>
+        </div>
+          <div class="bottom padder m-b-sm">
+            <a href="#" class="pull-right"> <i class="fa fa-heart-o"></i> </a>
+            <a (click)="getSubCats(item.categoryId)" data-toggle="modal" [attr.data-target]="'#myModal' + item.id" > <i  class="fa fa-plus-circle"></i> </a>
+          </div>
+        </div>
+        <a href="#">
+          <div class="img-holder" [ngStyle]="{ 'background-image': 'url(' + item.mainImage + ')'}" ></div>
+          <!--<img [src]="item.mainImage" alt="" class="r r-2x img-full"> -->
+        </a>
+      </div>
+      <div class="padder-v"><a href="#" class="text-ellipsis">{{item.artistName}}</a> <a href="#"
+                                                                                         class="text-ellipsis text-xs text-muted">{{item.videoDescription}}</a>
+      </div>
+    </div>
+
+
+    <div class="container demos">
+
+      <!-- Modal -->
+      <div class="modal right fade" id="myModal{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel2">Nominate {{item.artistName}}</h4>
+            </div>
+
+            <div class="modal-body">
+
+
+
+              <div class="funkyradio">
+
+
+                <form (ngSubmit)="addNomination(form)" #form="ngForm">
+                  <div *ngFor="let subCat of subCategories" class="funkyradio-default">
+                    <input type="radio" name="radio" id="{{subCat.slug}}-{{item.id}}" />
+                    <label for="{{subCat.slug}}-{{item.id}}">{{subCat.subCategoryName}}</label>
+                  </div>
+
+                  <button type="button" class="btn btn-default">Nominate</button>
+                </form>
+
+
+              </div>
+
+              
+            </div>
+
+          </div><!-- modal-content -->
+        </div><!-- modal-dialog -->
+      </div><!-- modal -->
+
+
+    </div><!-- container -->
+
+
+
+
+
+
+  </div>
+  <div class="clearfix visible-xs">
+
+  </div>
+</div>
+
+<hr>
+
+<div class="pagination">
+  <div class="row">
+    <div class="col-xs-12">
+      <nav aria-label="Page navigation">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </nav>
+    </div>
+  </div>
+</div>

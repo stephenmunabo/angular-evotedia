@@ -1,0 +1,8 @@
+<app-spinner *ngIf="showSpinner"></app-spinner>
+<li class="list-group-item clearfix" *ngFor="let collection of vote">
+  <a href="#" class="afi afi-vote pull-right m-t-sm m-l text-md">
+    <i class="afi afi-charts text"></i> <i class="icon-control-pause text-active"></i> </a> <a href="#" class="pull-left thumb-sm m-r">
+  <img src="{{collection.mainImage}}" alt="..."> </a> <a class="clear" href="vote-single.html"> <span class="block text-ellipsis">{{collection.artistName}}</span>
+  <small class="text-muted">In the {{collection.CategoryName}} category for {{collection.subCategoryDecription}}</small>
+</a>
+</li>

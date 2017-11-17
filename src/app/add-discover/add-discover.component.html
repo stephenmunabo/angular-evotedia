@@ -1,0 +1,30 @@
+<form (ngSubmit)="onSend(form)" #form="ngForm">
+    <div class="input-group">
+        <input type="text" class="form-control" name="videoYoutubeId" placeholder="Youtube Id" aria-describedby="basic-addon1" ngModel>
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" name="videoTitle" placeholder="Video Title" aria-describedby="basic-addon2" ngModel>
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" name="artistName" placeholder="Artist name" aria-describedby="basic-addon2" ngModel>
+    </div>
+
+    <div class="input-group">
+        <textarea type="text" class="form-control" name="videoDescription" placeholder="Deacription" aria-describedby="basic-addon2" ngModel></textarea>
+    </div>
+
+    <div class="input-group">
+
+        <select class="form-control" name="categoryId" id="" ngModel>
+            <option *ngFor="let category of categories" value="{{category.id}}">{{category.CategoryName}}</option>
+        </select>
+
+    </div>
+
+    <div class="input-group">
+
+        <button class="btn btn-primary">Add</button>
+    </div>
+</form>
